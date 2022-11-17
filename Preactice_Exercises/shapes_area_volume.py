@@ -21,13 +21,14 @@ class Square:
         self.area = square_get_area
         self.volume = square_get_volume
 
-
+# solve for circle area and volume
 pi = 3.14
 radius = float(input("What is the radius of circle: "))
 height = float(input("What is the height of your circle: "))
 circle_get_area = pi * radius ** 2
 circle_get_volume = pi * radius * 2 * height
 
+# solve for square area and volume
 side = int(input("How many sides does your square have?: "))
 square_get_area = side ** 2
 square_get_volume = side ** 3
