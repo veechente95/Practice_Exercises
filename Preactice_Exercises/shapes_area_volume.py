@@ -32,6 +32,7 @@ side = int(input("How many sides does your square have?: "))
 square_get_area = side ** 2
 square_get_volume = side ** 3
 
+# Creates a cleaner print layout 
 table = PrettyTable()
 table.align = "l"
 table.add_column("Circle Area & Volume", [f"Your circle area is {circle_get_area}", f"Your circle volume is {circle_get_volume}"])
