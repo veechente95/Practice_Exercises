@@ -4,21 +4,24 @@ second_tier_rate_high = 9.79
 
 
 def tier_rate():
-    """Returns HCF rates based on low or high usage seasons."""
-    # High Usage Season
+    """Returns HCF rates based on low and high usage seasons."""
     hcf = final_reading - initial_reading
-    high_first_rate = hcf * first_tier_rate
-
+    first_rate = hcf * first_tier_rate
+    
+    # --- High Usage Season ---
     if 4 <= month_num <= 10:
         if hcf > 23:
             hcf_high_difference = hcf - 23
             high_second_rate = (hcf_high_difference * second_tier_rate_high) + (23 * first_tier_rate)
             return high_second_rate
-        return high_first_rate
-
-        # Low Usage Season
-        # elif month_num == 11 or 12 or 1 or 2 or 3:
-        #     low_first_rate = hcf * first_tier_rate
+        return first_rate
+    # --- Low Usage Season ---
+    if month_num == 11 or 12 or 1 or 2 or 3:
+        if hcf > 15:
+            hcf_low_difference = hcf - 15
+            low_second_rate = (hcf_low_difference * second_tier_rate_low) + (15 * first_tier_rate)
+            return low_second_rate
+        return first_rate
 
 
 initial_reading = int(input("Initial meter reading: "))
