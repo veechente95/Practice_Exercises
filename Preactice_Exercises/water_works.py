@@ -7,7 +7,7 @@ def tier_rate():
     """Returns HCF rates based on low and high usage seasons."""
     hcf = final_reading - initial_reading
     first_rate = hcf * first_tier_rate
-    
+
     # --- High Usage Season ---
     if 4 <= month_num <= 10:
         if hcf > 23:
@@ -24,11 +24,29 @@ def tier_rate():
         return first_rate
 
 
-initial_reading = int(input("Initial meter reading: "))
-final_reading = int((input("Final meter reading: ")))
-customer_name = str(input("Customer name: "))
-month_num = int(input("Month number (1=Jan, 2=Feb, etc.): "))
-print("---")
-print(f"The bill for {customer_name} is ${round(tier_rate(), 2)}")
+should_continue = True
+while should_continue:
 
+    initial_reading = int(input("Initial meter reading: "))
+    if initial_reading < 0:
+        should_continue = False
+        print("The initial meter reading must not be negative.")
+
+    final_reading = int((input("Final meter reading: ")))
+    if initial_reading > final_reading:
+        should_continue = False
+        print("The final meter reading must be at least as large as the initial reading.")
+
+    customer_name = str(input("Customer name: "))
+    if customer_name == "":
+        should_continue = False
+        print("You must enter a customer name.")
+
+    month_num = int(input("Month number (1=Jan, 2=Feb, etc.): "))
+    if month_num != 1 <= month_num <= 12:
+        should_continue = False
+        print("The month number must be in the range 1 through 12.")
+
+    print("\n---")
+    print(f"The bill for {customer_name} is ${round(tier_rate(), 2)}")
 
