@@ -24,29 +24,35 @@ def tier_rate():
         return first_rate
 
 
-should_continue = True
-while should_continue:
-
+should_continue = False
+while not should_continue:
     initial_reading = int(input("Initial meter reading: "))
     if initial_reading < 0:
-        should_continue = False
         print("The initial meter reading must not be negative.")
+    else:
+        should_continue = True
 
-    final_reading = int((input("Final meter reading: ")))
-    if initial_reading > final_reading:
-        should_continue = False
-        print("The final meter reading must be at least as large as the initial reading.")
+    while should_continue:
+        final_reading = int((input("Final meter reading: ")))
+        if initial_reading > final_reading:
+            print("The final meter reading must be at least as large as the initial reading.")
+        else:
+            should_continue = False
 
-    customer_name = str(input("Customer name: "))
-    if customer_name == "":
-        should_continue = False
-        print("You must enter a customer name.")
+        while not should_continue:
+            customer_name = str(input("Customer name: "))
+            if customer_name == "":
+                print("You must enter a customer name.")
+            else:
+                should_continue = True
 
-    month_num = int(input("Month number (1=Jan, 2=Feb, etc.): "))
-    if month_num != 1 <= month_num <= 12:
-        should_continue = False
-        print("The month number must be in the range 1 through 12.")
+            while should_continue:
+                month_num = int(input("Month number (1=Jan, 2=Feb, etc.): "))
+                if month_num != month_num >= 1 or month_num != month_num <= 12:
+                    print("The month number must be in the range 1 through 12.")
+                else:
+                    should_continue = False
 
-    print("\n---")
-    print(f"The bill for {customer_name} is ${round(tier_rate(), 2)}")
+            print("\n---")
+            print(f"The bill for {customer_name} is ${round(tier_rate(), 2)}")
 
