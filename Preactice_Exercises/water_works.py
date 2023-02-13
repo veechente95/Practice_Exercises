@@ -2,16 +2,16 @@
 first_tier_rate = 5.41
 second_tier_rate_low = 7.77
 second_tier_rate_high = 9.79
-month_num = 0
 
 
-def tier_rate():
+def tier_rate(month_num):
     """Returns HCF rates based on low and high usage seasons."""
     hcf = final_reading - initial_reading
     first_rate = hcf * first_tier_rate
 
     # --- High Usage Season ---
-    if 4 <= month_num <= 10:
+    # if 4 <= month_num <= 10:
+    if month_num in range(4, 11):
         if hcf > 23:
             hcf_high_difference = hcf - 23
             high_second_rate = (hcf_high_difference * second_tier_rate_high) + (23 * first_tier_rate)
@@ -19,7 +19,7 @@ def tier_rate():
         return first_rate
 
     # --- Low Usage Season ---
-    if month_num == 11 or 12 or 1 or 2 or 3:
+    if month_num in (1, 2, 3, 11, 12):
         if hcf > 15:
             hcf_low_difference = hcf - 15
             low_second_rate = (hcf_low_difference * second_tier_rate_low) + (15 * first_tier_rate)
