@@ -1,25 +1,23 @@
 # https://web.archive.org/web/20220429062001/http://web.cs.ucla.edu/classes/spring22/cs31/
-first_tier_rate = 5.41
-second_tier_rate_low = 7.77
-second_tier_rate_high = 9.79
 
-
-def tier_rate(month_num, initial_reading, final_reading):
+def tier_rate(month_number, initial_read, final_read):
     """Returns HCF rates based on low and high usage seasons."""
-    hcf = final_reading - initial_reading
+    first_tier_rate = 5.41
+    second_tier_rate_low = 7.77
+    second_tier_rate_high = 9.79
+    hcf = final_read - initial_read
     first_rate = hcf * first_tier_rate
 
-    # --- High Usage Season ---
-    # if 4 <= month_num <= 10:
-    if month_num in range(4, 11):
+    # ----- HIGH USAGE SEASON -----
+    if month_number in range(4, 11):
         if hcf > 23:
             hcf_high_difference = hcf - 23
             high_second_rate = (hcf_high_difference * second_tier_rate_high) + (23 * first_tier_rate)
             return round(high_second_rate, 3)
         return round(first_rate, 3)
 
-    # --- Low Usage Season ---
-    if month_num in (1, 2, 3, 11, 12):
+    # ----- LOW USAGE SEASON -----
+    if month_number in (1, 2, 3, 11, 12):
         if hcf > 15:
             hcf_low_difference = hcf - 15
             low_second_rate = (hcf_low_difference * second_tier_rate_low) + (15 * first_tier_rate)
@@ -43,7 +41,6 @@ if __name__ == "__main__":
 
     print("\n---")
     print(f"The bill for {customer_name} is ${float(round(tier_rate(month_num, initial_reading, final_reading), 3))}")
-
 
 # ----- Program improvement using loops to iterate until valid input are made -----
 # should_continue = False
