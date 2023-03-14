@@ -1,11 +1,12 @@
 # https://web.archive.org/web/20220429062001/http://web.cs.ucla.edu/classes/spring22/cs31/
+import random
 
-normal_note = ("g", "r", "y", "b", "o")
-sustained_note = ("G", "R", "Y", "B", "O")
+normal_note = "g", "r", "y", "b", "o"
+sustained_note = "G", "R", "Y", "B", "O"
 no_note = "x"
-colors = ("G", "g", "R", "r", "Y", "y", "B", "b", "O", "o")
+colors = "G", "g", "R", "r", "Y", "y", "B", "b", "O", "o"
 digit = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-end_beat = "/"
+end_beat = "/", ""
 
 
 # color and digit
@@ -22,17 +23,12 @@ color_dict = {
     "o": 1,
 }
 
-beats = {
-     0: "/",
-     1: "color/",
-     2: "color + digit/",
-     3: "color + 2 digits/",
-}
+note_progression = random.choice(colors) + str(random.choice(digit)) + random.choice(end_beat)
+print(note_progression)
 
 
-def convertible_tune():
-    # TODO: Make beat syntactically correct
-    for beat in song:
-        if beat[-1] == "/":
+# def syntactically_correct():
+for beat in note_progression:
+    if beat[-1] == "/":
+        if len("/" > 0):
             return True
-    # TODO: 
