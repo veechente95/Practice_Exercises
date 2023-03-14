@@ -1,13 +1,38 @@
 # https://web.archive.org/web/20220429062001/http://web.cs.ucla.edu/classes/spring22/cs31/
 
-# normal note = press and release note
-# sustained note = press and hold note
-
-normal_note = ["g", "r", "y", "b", "o"]
-sustained_note = ["G", "R", "Y", "B", "O"]
+normal_note = ("g", "r", "y", "b", "o")
+sustained_note = ("G", "R", "Y", "B", "O")
 no_note = "x"
+colors = ("G", "g", "R", "r", "Y", "y", "B", "b", "O", "o")
+digit = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+end_beat = "/"
 
-# (Notice that the instructions gggb and GGGb are different. 
-# The first means "press and release the green button for each of the first three beats, then press and release the blue button", 
-# while the second means "press the green button on the first beat, hold it there until you release it at the end of the third beat, 
-# then press and release the blue button".)
+
+# color and digit
+color_dict = {
+    "G": 0,
+    "g": 2,
+    "R": 3,
+    "r": 4,
+    "Y": 5,
+    "y": 6,
+    "B": 7,
+    "b": 8,
+    "O": 9,
+    "o": 1,
+}
+
+beats = {
+     0: "/",
+     1: "color/",
+     2: "color + digit/",
+     3: "color + 2 digits/",
+}
+
+
+def convertible_tune():
+    # TODO: Make beat syntactically correct
+    for beat in song:
+        if beat[-1] == "/":
+            return True
+    # TODO: 
