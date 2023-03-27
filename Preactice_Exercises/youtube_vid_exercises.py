@@ -17,7 +17,6 @@ print(f"x: {x},"
 for _ in range(1, 8):
     print("Hello")
 
-
 # TODO 6): Wrote a program that generates a random number from 1 to 100
 import random
 
@@ -62,7 +61,6 @@ print(f"The factorial of {number} is: {factorial}")
 character = str(input("Please enter any character: "))
 ascii_code = ord(character)
 print(f"ascii code of {character} is {ascii_code}")
-
 
 # TODO 12): Write a program to print current date
 import datetime
@@ -109,3 +107,10 @@ transpose = [[1, 2],
 x_array = numpy.array(x).flatten().reshape(3, 2)
 print(x_array)
 
+# TODO 15): Write a program to sort the list in alphabetical order and number is ascending order
+unsorted_list = ["d", "x", "b", "a", "y", "g"]
+unsorted_numbers = [3, 56, 34, -21, 0, 99]
+sorted_list = sorted(unsorted_list)
+sorted_numbers = sorted(unsorted_numbers)
+print(sorted_list)
+print(sorted_numbers)
