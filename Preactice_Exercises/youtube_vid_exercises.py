@@ -114,3 +114,10 @@ sorted_list = sorted(unsorted_list)
 sorted_numbers = sorted(unsorted_numbers)
 print(sorted_list)
 print(sorted_numbers)
+
+# TODO 16): Write a program to find the most frequent number from list/array
+from statistics import mode
+number_list = [2, 5, 6, 2, 7, 2, 2, 5, 2]
+frequent_number = mode(number_list)
+
+print(f"The most frequent number is {frequent_number}")
