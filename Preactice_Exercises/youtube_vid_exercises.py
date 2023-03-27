@@ -132,3 +132,37 @@ s = (a + b + c) / 2
 area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
 
 print(f"The area of the triangle is {round(area, 2)}")
+
+# TODO 18): Write a program to convert kilometers to miles
+kilometers = float(input("Enter kilometers: "))
+miles = kilometers * 0.621371
+print(f"{kilometers} kilometers = {round(miles, 2)} miles")
+
+# TODO 19): Write a program to display calendar
+import calendar
+month = int(input(" Select a month (1-12): "))
+year = int(input(" Select a year: "))
+print(calendar.month(year, month))
+
+# TODO 20): Write 2 programs to check leap year
+# ------ THIS IS THE LOGICAL WAY ----------
+year = int(input("Which year do you want to check?: "))
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("NOT leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("NOT leap year.")
+
+# ------ THIS IS USING PACKAGES  ----------
+import calendar
+
+year = int(input("Which year do you want to check?: "))
+if calendar.isleap(year):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is NOT a leap year.")
