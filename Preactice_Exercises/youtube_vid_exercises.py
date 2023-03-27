@@ -103,7 +103,6 @@ transpose = [[1, 2],
              [3, 4],
              [5, 6]]
 
-
 x_array = numpy.array(x).flatten().reshape(3, 2)
 print(x_array)
 
@@ -121,3 +120,15 @@ number_list = [2, 5, 6, 2, 7, 2, 2, 5, 2]
 frequent_number = mode(number_list)
 
 print(f"The most frequent number is {frequent_number}")
+
+# TODO 17): Write a program to find the area of a triangle
+a = 5
+b = 6
+c = 7
+
+# calculate the semi-perimeter
+s = (a + b + c) / 2
+# calculate the area
+area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+
+print(f"The area of the triangle is {round(area, 2)}")
