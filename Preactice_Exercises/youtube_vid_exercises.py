@@ -94,3 +94,18 @@ print(f"Addition of two matrices is: {numpy.array(add).reshape(3, 3)}")
 print(f"Subtraction of two matrices is: {numpy.array(sub).reshape(3, 3)}")
 print(f"Multiplication of two matrices is: {numpy.array(mult).reshape(3, 3)}")
 print(f"Division of two matrices is: {numpy.array(div).reshape(3, 3)}")
+
+# TODO 14): Write a program to transpose the given matrix
+import numpy
+
+x = [[1, 2, 3],
+     [4, 5, 6]]
+
+transpose = [[1, 2],
+             [3, 4],
+             [5, 6]]
+
+
+x_array = numpy.array(x).flatten().reshape(3, 2)
+print(x_array)
+
