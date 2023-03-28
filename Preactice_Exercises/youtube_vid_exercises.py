@@ -166,3 +166,10 @@ if calendar.isleap(year):
     print(f"{year} is a leap year.")
 else:
     print(f"{year} is NOT a leap year.")
+
+# TODO 21): Write a program to find sum of natural numbers
+number = int(input("Enter a number: "))
+natural_numbers = [number for number in range(1, number + 1)]
+sum_natural_numbers = sum(natural_numbers)
+print(natural_numbers)
+print(f"Sum of natural numbers for {number } is {sum_natural_numbers}.")
