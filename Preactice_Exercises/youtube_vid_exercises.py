@@ -181,3 +181,27 @@ num_2 = int(input("Enter your second number: "))
 
 lcm = math.lcm(num_1, num_2)
 print(f"The LCM of {num_1} and {num_2} is {lcm}.")
+
+# TODO 23): Write a program to find GCD (Greatest Common Divisor) also called HCF (Highest Common Factor)
+import math
+num_1 = int(input("Enter your first number: "))
+num_2 = int(input("Enter your second number: "))
+
+lcm = math.gcd(num_1, num_2)
+print(f"The LCM of {num_1} and {num_2} is {lcm}.")
+
+# TODO 24): Write a program to sort words in alphabetical order
+sentence = str(input("Enter a sentence to sort words in alphabetical order: "))
+words = sentence.split()
+sorted_words = sorted(words)
+
+sorted_sentence = ""
+for word in sorted_words:
+    sorted_sentence += " " + word
+
+print(f"Sorted:{sorted_sentence}")
+
+# TODO 25): Write a program to sort elements from list in ascending order
+list = ["a", "b", "z", "x", "g"]
+new_list = sorted(list)
+print(new_list)
