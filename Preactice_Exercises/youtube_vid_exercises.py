@@ -205,3 +205,23 @@ print(f"Sorted:{sorted_sentence}")
 list = ["a", "b", "z", "x", "g"]
 new_list = sorted(list)
 print(new_list)
+
+# TODO 26): Write a program to sort elements from list in descending order
+list = ["a", "b", "z", "x", "g"]
+new_list = sorted(list, reverse=True)
+print(f"Original List: {list}")
+print(f"Reverse Sorted List: {new_list}")
+
+# TODO 27): Write a program to generate even number series
+number = int(input("Enter a number. I will generate an even number series: "))
+print([num for num in range(1, number + 1) if num % 2 == 0])
+# for num in range(1, number + 1):
+#     if num % 2 == 0:
+#         print(num)
+
+# TODO 28): Write a program to generate odd number series
+number = int(input("Enter a number. I will generate an even number series: "))
+print([num for num in range(1, number + 1) if num % 2 != 0])
+# for num in range(1, number + 1):
+#     if num % 2 != 0:
+#         print(num)
