@@ -173,3 +173,11 @@ natural_numbers = [number for number in range(1, number + 1)]
 sum_natural_numbers = sum(natural_numbers)
 print(natural_numbers)
 print(f"Sum of natural numbers for {number } is {sum_natural_numbers}.")
+
+# TODO 22): Write a program to find L.C.M (Least Common Multiple)
+import math
+num_1 = int(input("Enter your first number: "))
+num_2 = int(input("Enter your second number: "))
+
+lcm = math.lcm(num_1, num_2)
+print(f"The LCM of {num_1} and {num_2} is {lcm}.")
