@@ -225,3 +225,21 @@ print([num for num in range(1, number + 1) if num % 2 != 0])
 # for num in range(1, number + 1):
 #     if num % 2 != 0:
 #         print(num)
+
+# TODO 30): Write a program to generate fibonacci number series\
+def fibonacci(num):
+    a = 0
+    b = 1
+    if num == 1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+        for num in range(2, num):
+            c = a + b
+            a = b
+            b = c
+            print(c)
+
+
+fibonacci(int(input("Enter a number. I will generate a fibonacci number series: ")))
