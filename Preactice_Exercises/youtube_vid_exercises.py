@@ -254,3 +254,34 @@ print(f"New: {new_sentence}")
 list1 = ["a", 1, "a", 1,  "b", 2, "c", 2, "b", 3, "c", 3]
 list2 = list(set(list1))
 print(list2)
+
+# TODO 33): Write a program to find the smallest number from a list
+num_list = [10, 100, -24, 5, 12, 68]
+smallest_num = min(num_list)
+print(f"Number List: {num_list}")
+print(f"The smallest number is {smallest_num}")
+
+# TODO 34): Write a program to find the largest number from a list
+num_list = [10, 100, -24, 5, 12, 68]
+largest_num = max(num_list)
+print(f"Number List: {num_list}")
+print(f"The largest number is {largest_num}")
+
+# TODO 35): Write a program to check if character is vowel or consonant
+character = str(input("Enter a character: ")).lower()
+if character in ["a", "e", "i", "o", "u"]:
+    print("Your character is a vowel.")
+else:
+    print("Your character is a consonant.")
+
+# TODO 36): Write a program to find the sum of all numbers in a list
+num_list = [10, 20, 30, 40]
+sum = sum(num_list)
+print(f"Number list = {num_list}")
+print(f"Sum of number list = {sum}")
+
+# TODO 37): Write a program to find the number of digits from a number
+number = str(input("Enter a number: "))
+num_digits = len(number)
+print(f"Number: {number}")
+print(f"Number of digits: {num_digits}")
