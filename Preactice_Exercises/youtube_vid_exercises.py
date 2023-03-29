@@ -243,3 +243,14 @@ def fibonacci(num):
 
 
 fibonacci(int(input("Enter a number. I will generate a fibonacci number series: ")))
+
+# TODO 31): Write a program to remove "," from the given string
+sentence = "Hello, I am a python developer"
+new_sentence = sentence.replace(",", "")
+print(f"Original: {sentence}")
+print(f"New: {new_sentence}")
+
+# TODO 32): Write a program to remove all duplicate values from a given list
+list1 = ["a", 1, "a", 1,  "b", 2, "c", 2, "b", 3, "c", 3]
+list2 = list(set(list1))
+print(list2)
