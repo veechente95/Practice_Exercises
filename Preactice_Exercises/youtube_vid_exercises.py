@@ -315,3 +315,28 @@ string = "2005"
 convert = int(string)
 print(type(string), string)
 print(type(convert), convert)
+
+# TODO 43): Write a program to reverse a string
+sentence = str(input("Enter a sentence to reverse: "))
+reverse = sentence[::-1]
+print(reverse)
+
+# TODO 44): Write a program to convert list into string
+sentence = ["Hello", "I", "am", "a", "python", "developer"]
+new_string = ""
+for word in sentence:
+    new_string += word + " "
+
+print(new_string)
+
+# TODO 45): Write a program which takes string and converts it to upper case
+string = "abcdefg"
+upper = string.upper()
+print(f"Lower Case: {string}")
+print(f"Upper Case: {upper}")
+
+# TODO 46): Write a program which takes an upper case string and converts it to lower case
+string = "ABCDEFG"
+lower = string.lower()
+print(f"Upper Case: {string}")
+print(f"Lower Case: {lower}")
