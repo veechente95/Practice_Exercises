@@ -297,3 +297,8 @@ sentence = str(input("Enter a sentence: "))
 character = str(input("Enter the character to count: "))
 char_count = sentence.count(character)
 print(f"Character Count = {char_count}")
+
+# TODO 40): Write a program to count the number of words in string
+sentence = str(input("Enter a sentence: "))
+words = len(sentence.split())
+print(f"Number of words: {words}")
