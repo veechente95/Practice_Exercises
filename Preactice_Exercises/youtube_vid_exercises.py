@@ -302,3 +302,16 @@ print(f"Character Count = {char_count}")
 sentence = str(input("Enter a sentence: "))
 words = len(sentence.split())
 print(f"Number of words: {words}")
+
+# TODO 41): Write a program to check if string is blank
+sentence = str(input("Enter a sentence: "))
+if sentence == "":
+    print("Sentence is blank.")
+else:
+    print("Sentence is not blank.")
+
+# TODO 42): Write a program to convert string to integer
+string = "2005"
+convert = int(string)
+print(type(string), string)
+print(type(convert), convert)
