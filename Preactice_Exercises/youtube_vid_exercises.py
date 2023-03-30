@@ -340,3 +340,20 @@ string = "ABCDEFG"
 lower = string.lower()
 print(f"Upper Case: {string}")
 print(f"Lower Case: {lower}")
+
+# TODO 47): Write a program which displays a tree using "*"
+for i in range(1, 5):
+    print(' ' * (5 - i), '* ' * i)
+
+# TODO 48): Write a program which displays an upside down tree using "*"
+number = 5
+for rows in range(number, 0, -1):
+    for columns in range(0, number - rows):
+        print(end=" ")
+    for columns in range(0, rows):
+        print("*", end=" ")
+    print()
+
+# TODO 49): Write a program which displays a skewed tree using "*"
+for i in range(1, 5):
+    print(' ' * (i - 5), '* ' * i)
