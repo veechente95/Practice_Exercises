@@ -285,3 +285,15 @@ number = str(input("Enter a number: "))
 num_digits = len(number)
 print(f"Number: {number}")
 print(f"Number of digits: {num_digits}")
+
+# TODO 38): Write a program to find unique numbers from a list
+num_list = [10, 20, 30, 10, 20, 30]
+unique_num = list(set(num_list))
+print(f"List: {num_list}")
+print(f"Unique Numbers: {unique_num}")
+
+# TODO 39): Write a program to count the number of occurrences of a character in string
+sentence = str(input("Enter a sentence: "))
+character = str(input("Enter the character to count: "))
+char_count = sentence.count(character)
+print(f"Character Count = {char_count}")
