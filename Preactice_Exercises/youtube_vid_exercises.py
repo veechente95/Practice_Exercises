@@ -375,3 +375,54 @@ for i in range(height):
     print(" " * (height - i), "*" * (i * 2 + 1))
 for i in range(height - 2, -1, -1):
     print(" " * (height - i), "*" * (i * 2 + 1))
+
+# TODO 53): Write a program which displays ascending number steps
+for x in range(5):
+    for i in range(x + 1):
+        print(i + 1, end=" ")
+    print("\n")
+
+# TODO 54): Write a program which displays ascending alphabet steps
+height = int(input("please number of rows: "))
+a = 65
+for i in range(1, height + 1):
+    for j in range(1, i + 1):
+        print("%c" % a, end="")
+    a += 1
+    print()
+
+# TODO 55): Write a program to delete given element of an index
+# delete index 3 or "d"
+list = ["a", "b", "c", "d", "e", "f", "g"]
+list.remove("d")
+print(f"List: {list}")
+
+# TODO 56): Write a program to convert minutes to seconds
+minutes = int(input("Enter number of minutes to convert to seconds: "))
+seconds = minutes * 60
+print(f"{minutes} minutes = {seconds} seconds")
+
+# TODO 57): Write a program to convert hours to seconds
+hours = int(input("Enter number of hours to convert to seconds: "))
+seconds = hours * 60 * 60
+print(f"{hours} minutes = {seconds} seconds")
+
+# TODO 58): Write a program to convert age to days
+import datetime
+year = int(input("Enter your birth year: "))
+month = int(input("Enter your birth month: "))
+day = int(input("Enter your birth day: "))
+birthday = datetime.date(year, month, day)
+now = datetime.date.today()
+difference = now - birthday
+print(difference.days)
+
+# TODO 59): Write a program to concatenate 2 integer lists
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 10]
+concatenate_list = list1 + list2
+print(concatenate_list)
+
+# TODO 60): Write a program to convert decimal number to binary
+num = int(input("Select a number to convert to binary: "))
+print(bin(num))
