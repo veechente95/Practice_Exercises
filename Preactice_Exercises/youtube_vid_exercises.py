@@ -357,3 +357,21 @@ for rows in range(number, 0, -1):
 # TODO 49): Write a program which displays a skewed tree using "*"
 for i in range(1, 5):
     print(' ' * (i - 5), '* ' * i)
+
+# TODO 50): Write a program which displays a 5 x 5 square using "*"
+number = 5
+for i in range(number):
+    print("* " * number)
+
+# TODO 51): Write a program which displays ascending number steps
+for x in range(5):
+    for i in range(x + 1):
+        print(i + 1, end=" ")
+    print("\n")
+
+# TODO 52): Write a program which displays a diamond shape using "*"
+height = int(input("please enter diamond's height: "))
+for i in range(height):
+    print(" " * (height - i), "*" * (i * 2 + 1))
+for i in range(height - 2, -1, -1):
+    print(" " * (height - i), "*" * (i * 2 + 1))
