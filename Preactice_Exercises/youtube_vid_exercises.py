@@ -424,5 +424,25 @@ concatenate_list = list1 + list2
 print(concatenate_list)
 
 # TODO 60): Write a program to convert decimal number to binary
-num = int(input("Select a number to convert to binary: "))
+num = int(input("Enter a number to convert to binary: "))
 print(bin(num))
+
+# TODO 61): Write a program to convert binary number to decimal
+num = str(input("Enter a binary number to convert to decimal: "))
+print(int(num, 2))   # int() func takes 2nd argument (base of number to be converted), which is 2 for binary numbers.
+
+# TODO 62): Write a program to convert decimal number to octal
+num = int(input("Enter a number to convert to octal: "))
+print(oct(num))
+
+# TODO 63): Write a program to convert octal number to decimal
+num = str(input("Enter an octal number to convert to decimal: "))
+print(int(num, 8))   # int() func takes 2nd argument (base of number to be converted), which is 2 for octal numbers.
+
+# TODO 64): Write a program to convert decimal number to hexa-decimal
+num = int(input("Enter a number to convert to hexa-decimal: "))
+print(hex(num))
+
+# TODO 65): Write a program to convert hexa-decimal number to decimal
+num = str(input("Enter a hexa-decimal number to convert to decimal: "))
+print(int(num, 16))   # int() func takes 2nd argument (base of number to be converted), which is 16 for hex numbers.
