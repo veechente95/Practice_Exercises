@@ -466,3 +466,32 @@ for num in num_list:
 
 print(f"Prime number(s) are {prime_num}")
 print(f"Count: {count}")
+
+# TODO 68): Write a program to find the second largest number from a list
+num_list = [2, 45, 64, 23, 21, 3]
+second_largest = sorted(num_list)[1]
+print(second_largest)
+
+# TODO 69): Write a program to check if string is palindrome or not
+sentence = str(input("Enter word or sentence. I will check if it is palindrome: "))
+if sentence == sentence[::-1]:
+    print("It's palindrome!")
+else:
+    print("NOT palindrome")
+
+# TODO 70): Write a program to find the average of numbers
+num_list = [12, 45, 78, 36, 45, 237.11, -1, 88]
+count = 0
+for num in num_list:
+    count += 1
+avg = sum(num_list) / count
+print(avg)
+
+# TODO 71): Write a program to count the number of capital characters in string
+sentence = str(input("Enter a sentence. I will count the number of capital letters: "))
+count = 0
+for letter in sentence:
+    if letter.isupper():
+        count += 1
+
+print(count)
