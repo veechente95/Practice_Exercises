@@ -446,3 +446,23 @@ print(hex(num))
 # TODO 65): Write a program to convert hexa-decimal number to decimal
 num = str(input("Enter a hexa-decimal number to convert to decimal: "))
 print(int(num, 16))   # int() func takes 2nd argument (base of number to be converted), which is 16 for hex numbers.
+
+# TODO 66): Write a program to check if word is plural or singular
+word = str(input("Enter a word. I will check if its plural or singular: "))
+if word[-1] == "s":
+    print("Plural")
+else:
+    print("Singular")
+
+# TODO 67): Write a program to find number of prime numbers in list
+import sympy
+num_list = [3, 6, 7, 8, 9, 57]
+prime_num = []
+count = 0
+for num in num_list:
+    if sympy.isprime(num):   # if prime is True
+        prime_num.append(num)
+        count += 1
+
+print(f"Prime number(s) are {prime_num}")
+print(f"Count: {count}")
