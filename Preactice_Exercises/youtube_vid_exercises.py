@@ -495,3 +495,42 @@ for letter in sentence:
         count += 1
 
 print(count)
+
+# TODO 72): Write a program to remove the first and last character of a string
+sentence = str(input("Enter a sentence: "))
+new_sentence = sentence[1:-1]
+print(new_sentence)
+
+# TODO 73): Write a program to find union of two given lists
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 10]
+combined_list = list1 + list2
+print(combined_list)
+
+# TODO 74): Write a program to find same numbers in two given list
+list1 = [1, 2, 3, 4, 5]
+list2 = [0, 2, 3, 4, 7]
+same_numbers = [num for num in list1 and list2 if num in list1 and list2]
+print(same_numbers)
+
+# another way of writing this
+same_num = []
+for num in list1 and list2:
+    if num in list1 and list2:
+        same_num.append(num)
+
+print(same_num)
+
+# TODO 75): Write a program to calculate the mean
+num_list = [19, 21, 46, 11, 18]
+count = 0
+for num in num_list:
+    count += 1
+mean = sum(num_list) / count
+print(mean)
+
+# TODO 76): Write a program to calculate the median
+import statistics
+num_list = [1, 2, 3, 4, 5, 6]
+median = statistics.median(num_list)
+print(median)
