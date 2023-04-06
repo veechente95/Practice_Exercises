@@ -534,3 +534,45 @@ import statistics
 num_list = [1, 2, 3, 4, 5, 6]
 median = statistics.median(num_list)
 print(median)
+
+# TODO 77): Write a function which takes int list and returns sum
+def sum(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+
+print(sum((10, 20, 30, 40)))
+
+
+# TODO 78): Write a function which creates a list with given range
+def num_range(num1, num2):
+    for num in range(num1, num2 + 1):
+        print(num)
+print(num_range(10, 20))
+
+# TODO 79): Write a program to replace given character in a string
+# replace "o" with "u"
+sentence = "Hello World"
+replace = sentence.replace("o", "u")
+print(replace)
+
+# TODO 80): Write a program to replace given word in a string
+# replace "python" with "fava"
+sentence = "I am a python developer."
+replace = sentence.replace("python", "java")
+print(sentence)
+print(replace)
+
+# TODO 81): Write a program to create matrix filled with 0's
+import numpy
+num = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+num = numpy.array(num)
+print(num[0].reshape(3, 3))
+
+# TODO 82): Write a program to create matrix filled with 1's
+import numpy
+num = [[1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1]]
+num = numpy.array(num)
+print(num[0].reshape(3, 3))
